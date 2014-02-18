@@ -9,34 +9,30 @@
     tools:context=".HelpActivity" >
 
     <Button
-        android:id="@+id/buttonReturnHelp"
+        android:id="@+id/btnReturn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/returnabc"
-        android:text="Button" />
+        android:text="Return" />
 
     <Button
-        android:id="@+id/buttonExitHelp"
+        android:id="@+id/btnOk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignLeft="@+id/nameAppli"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:text="Ok" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/textRules"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonExitHelp"
-        android:layout_alignLeft="@+id/buttonReturnHelp"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/buttonReturnHelp"
+        android:layout_above="@+id/btnOk"
+        android:layout_alignLeft="@+id/btnReturn"
+        android:layout_alignRight="@+id/btnOk"
+        android:layout_below="@+id/btnReturn"
+        android:editable="false"
         android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="How to play ? Blablablablablabla Blablablablablabla Blablablablablabla Blablablablablabla Blablablablablabla Blablablablablabla Blablablablablabla " >
-
-        <requestFocus />
-    </EditText>
+        android:inputType="none|textMultiLine" />
 
 </RelativeLayout>

@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class HelpActivity extends Activity {
 
@@ -14,10 +15,13 @@ public class HelpActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.help_layout);
-        Button bExit = (Button) findViewById(R.id.buttonExitHelp);
+        Button bExit = (Button) findViewById(R.id.btnReturn);
         bExit.setOnClickListener(ecouteurBExit);
-        Button bReturn = (Button) findViewById(R.id.buttonReturnHelp);
+        Button bReturn = (Button) findViewById(R.id.btnOk);
         bReturn.setOnClickListener(ecouteurBExit);
+		TextView tv = (TextView) findViewById(R.id.textRules);
+		tv.setText("Règles du jeu :\n\n-Touchez l'écran pour détruire les monstres\n-Certains monstres nécessitent d'être touchés à plusieurs reprises pour être détruits!");
+		tv.setKeyListener(null);
 	}
 
 	@Override
