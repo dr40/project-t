@@ -20,7 +20,7 @@ public class HelpActivity extends Activity {
         Button bReturn = (Button) findViewById(R.id.btnOk);
         bReturn.setOnClickListener(ecouteurBExit);
 		TextView tv = (TextView) findViewById(R.id.textRules);
-		tv.setText("Règles du jeu :\n\n-Touchez l'écran pour détruire les monstres\n-Certains monstres nécessitent d'être touchés à plusieurs reprises pour être détruits!");
+		tv.setText("Règles du jeu :\n\n-Touchez l'écran pour détruire les avions avant qu'il n'ateignent votre porte-avions\n-Certains avions sont plus rapide que les autres et sont ainsi plus difficile à être détruits!");
 		tv.setKeyListener(null);
 	}
 

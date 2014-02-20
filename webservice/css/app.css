@@ -1,0 +1,38 @@
+
+#tableView {
+
+}
+	#tableView table {
+		width:100%;
+	}
+	#tableView th {
+		background-color:#f0f0f0;
+		color:#a0a0a0;
+	}
+	#tableView .numCell {
+		width:65px;
+		background-color:#EBE4C7;
+		color:#95956A;
+		text-align:center;
+	}
+	#tableView .evenRow {
+		background-color:#FDF8CC;
+		color:#B2A058;
+	}
+		#tableView .evenRow .highlight {
+			background-color:#99CCFF;
+			color:white;
+		}
+	#tableView .oddRow {
+		background-color:#F1EDC5;
+		color:#95956A;
+	}
+		#tableView .oddRow .highlight {
+			background-color:#99CCFF;
+			color:white;
+		}
+
+	#tableView th .sort {
+		font-size:10px;
+	}
+	

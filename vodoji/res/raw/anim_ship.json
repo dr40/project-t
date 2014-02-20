@@ -1,0 +1,31 @@
+{
+
+	"main": "idle",
+	
+	
+	"frame": {
+	
+		"idle": [
+			{"crop-x":0, "crop-y":0, "crop-w":32, "crop-h": 32, "delay":100},
+			{"crop-x":32, "crop-y":0, "crop-w":32, "crop-h": 32, "delay":100},
+			{"crop-x":64, "crop-y":0, "crop-w":32, "crop-h": 32, "delay":100},
+			{"crop-x":96, "crop-y":0, "crop-w":32, "crop-h": 32, "delay":100},
+			{"crop-x":128, "crop-y":0, "crop-w":32, "crop-h": 32, "delay":100},
+			{"crop-x":160, "crop-y":0, "crop-w":32, "crop-h": 32, "delay":100},
+			{"crop-x":192, "crop-y":0, "crop-w":32, "crop-h": 32, "delay":100},
+			{"crop-x":224, "crop-y":0, "crop-w":32, "crop-h": 32, "delay":100}
+		],
+		"hit": [
+			{"crop-x":0, "crop-y":32, "crop-w":32, "crop-h": 32, "delay":50},
+			{"crop-x":32, "crop-y":32, "crop-w":32, "crop-h": 32, "delay":50},
+			{"crop-x":64, "crop-y":32, "crop-w":32, "crop-h": 32, "delay":50},
+			{"crop-x":96, "crop-y":32, "crop-w":32, "crop-h": 32, "delay":50},
+			{"crop-x":128, "crop-y":32, "crop-w":32, "crop-h": 32, "delay":50},
+			{"crop-x":160, "crop-y":32, "crop-w":32, "crop-h": 32, "delay":50},
+			{"crop-x":192, "crop-y":32, "crop-w":32, "crop-h": 32, "delay":50},
+			{"crop-x":224, "crop-y":32, "crop-w":32, "crop-h": 32, "delay":50}
+		]
+	
+	}
+
+}

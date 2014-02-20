@@ -4,13 +4,18 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="7" />
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="7" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
         <activity
             android:name="fr.vodoji.MyActivity"
             android:label="@string/app_name" >
@@ -21,12 +26,24 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="fr.vodoji.GameActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name="fr.vodoji.HelpActivity"
             android:label="@string/title_activity_help" >
         </activity>
         <activity
             android:name="fr.vodoji.ActHightScores"
             android:label="@string/title_activity_hight_scores" >
+        </activity>
+        <activity
+            android:name="fr.vodoji.LevelSelect"
+            android:label="@string/title_activity_level_select" >
+        </activity>
+        <activity
+            android:name="fr.vodoji.HighscoreAdd"
+            android:label="@string/title_activity_highscore_add" >
         </activity>
     </application>
 

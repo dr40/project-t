@@ -1,0 +1,38 @@
+{
+
+	"main": "idle",
+	
+	
+	"frame": {
+	
+		"idle": [
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":1000},
+			{"crop-x":41, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":1000}
+		],
+		"hit": [
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":82, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":82, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":82, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":82, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":82, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":82, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":82, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":82, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":82, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":82, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25},
+			{"crop-x":0, "crop-y":0, "crop-w":41, "crop-h": 197, "delay":25}
+		]
+	
+	}
+
+}

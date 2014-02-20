@@ -6,5 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_hight_scores">HightScores</string>
+    <string name="title_activity_level_select">LevelSelect</string>
+    <string name="title_activity_highscore_add">HighscoreAdd</string>
 
 </resources>

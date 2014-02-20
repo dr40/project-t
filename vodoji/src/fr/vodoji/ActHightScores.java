@@ -1,8 +1,6 @@
 package fr.vodoji;
 
-import fr.vodoji.model.HightScores;
 import android.os.Bundle;
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.view.Menu;
@@ -10,18 +8,27 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import fr.vodoji.highscore.Highscore;
 
 public class ActHightScores extends ListActivity {
 
+	protected static Highscore highScore;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		/* Initialize */
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.hight_scores);
 				
-		HightScores hs = new HightScores(true); // Iinitialisation de l'hightscore avec des scores bidon
-		String[] listHS = HightScores.getListeHS();
+		/* Load highscores table - dynamically */
+		highScore = new Highscore();
+		//highScore.refresh();
+		highScore.loadLocalScoreList(getApplicationContext());
+		//HightScores hs = new HightScores(true); // Iinitialisation de l'hightscore avec des scores bidon
+		//String[] listHS = HightScores.getListeHS();
 		
-	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,listHS);
+		
+	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,highScore.getScoreList());
 	       
 	    setListAdapter(adapter);
 	    

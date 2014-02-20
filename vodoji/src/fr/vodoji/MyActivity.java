@@ -1,7 +1,6 @@
 package fr.vodoji;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,14 +11,9 @@ import android.widget.Toast;
 import android.view.View.OnClickListener;
 import android.view.View;
 import android.os.Handler;
+import fr.vodoji.GameGlobals;
 
 public class MyActivity extends Activity {
-	/**
-	 * Called when the activity is first created.
-	 */
-	private static boolean music = true;
-	private static boolean vibration = true;
-	
 
     private Handler mHandler;
 
@@ -41,7 +35,14 @@ public class MyActivity extends Activity {
             
             TextView tv = (TextView) findViewById(R.id.nameAppli);
     		tv.setText("VODOJI");
+    		tv.setEnabled(false);
     		tv.setKeyListener(null);
+    		
+    		Button bPlayGame = (Button) findViewById(R.id.btnGame);
+    		bPlayGame.setOnClickListener(btnGameListener);
+    		Button bBasicGame = (Button) findViewById(R.id.btnBasicGame);
+    		bBasicGame.setOnClickListener(btnBasicListener);
+    		
     		
             Button bMusic = (Button) findViewById(R.id.btnMusic);
             bMusic.setOnClickListener(ecouteurMusic);
@@ -54,8 +55,28 @@ public class MyActivity extends Activity {
         }
     };   
     
+    
+    private OnClickListener btnGameListener = new OnClickListener() {
+        @Override
+        public void onClick(View view) {
+        	GameGlobals.gameBasicMode = false;
+        	Intent i = new Intent(view.getContext(), LevelSelect.class);
+        	startActivity(i);
+        }
+    };
+    private OnClickListener btnBasicListener = new OnClickListener() {
+        @Override
+        public void onClick(View view) {
+        	GameGlobals.gameBasicMode = true;
+        	Intent i = new Intent(view.getContext(), LevelSelect.class);
+        	startActivity(i);
+        }
+    };
+    
+    
+    
     private OnClickListener ecouteurVib = new OnClickListener() {
-        @Override 
+        @Override
         public void onClick(View view) {
         	switchVibration();
         }
@@ -92,12 +113,12 @@ public class MyActivity extends Activity {
     };
     
     public void switchMusic() {
-    	music = !music;
+    	GameGlobals.music = !GameGlobals.music;
     	showInfo(1);
     }
     public void switchVibration() {
-    	vibration = !vibration;
-    	if (vibration){
+    	GameGlobals.vibrator = !GameGlobals.vibrator;
+    	if (GameGlobals.vibrator){
     		((Vibrator) getSystemService(Context.VIBRATOR_SERVICE)).vibrate(1000);
     	}
     	showInfo(2);
@@ -108,13 +129,13 @@ public class MyActivity extends Activity {
     	Toast toast = new Toast(context);
         switch(id) {
 	        case 1:
-	          if (music)
+	          if (GameGlobals.music )
 	        	  toast = Toast.makeText(context, "Musique activée", Toast.LENGTH_LONG);
 	          else
 	        	  toast = Toast.makeText(context, "Musique désactivée",Toast.LENGTH_LONG);
 	          break;
 	        case 2:
-	          if (vibration)
+	          if (GameGlobals.vibrator)
 	        	  toast = Toast.makeText(context, "Vibration activée",Toast.LENGTH_LONG);
 	          else
 	        	  toast = Toast.makeText(context, "Vibration désactivée",Toast.LENGTH_LONG);

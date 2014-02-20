@@ -53,31 +53,13 @@
             android:text="Help" />
 
         <Button
-            android:id="@+id/btnHS"
+            android:id="@+id/btnBasicGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/buttonHelp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:text="Hightscores" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/btnHS"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:text="New game advanced" />
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/button6"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:text="New game classic" />
+            android:text="Jeu basic" />
 
         <EditText
             android:id="@+id/nameAppli"
@@ -92,6 +74,24 @@
 
             <requestFocus />
         </EditText>
+
+        <Button
+            android:id="@+id/btnHS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnBasicGame"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="Highscores" />
+
+        <Button
+            android:id="@+id/btnGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnHS"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="Nouvelle partie" />
 
     </RelativeLayout>
 

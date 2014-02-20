@@ -1,0 +1,51 @@
+package fr.vodoji.engine.graphics.animation;
+
+import java.util.ArrayList;
+
+import fr.vodoji.utils.json.JSON;
+
+/**
+ * 
+ * @author Dorian RODDE, Vivian RODDE
+ */
+public class AnimationFrame {
+
+	///////////////////////////////////////////////////////////////////////////////////////////
+	// Members
+	///////////////////////////////////////////////////////////////////////////////////////////
+
+	protected ArrayList<AnimationFrameItem> _items;
+	
+	
+	///////////////////////////////////////////////////////////////////////////////////////////
+	// Constructors
+	///////////////////////////////////////////////////////////////////////////////////////////
+
+	public AnimationFrame(JSON json) {
+		/* Initialize */
+		_items = new ArrayList<AnimationFrameItem>();
+		/* Load all items */
+		for(int i = 0, max = json.size(); i < max; i++) {
+			AnimationFrameItem item = new AnimationFrameItem(json.get(i));
+			_items.add(item);
+		}
+	}
+	
+
+	///////////////////////////////////////////////////////////////////////////////////////////
+	// Item management
+	///////////////////////////////////////////////////////////////////////////////////////////
+
+	public int size() {
+		return _items.size();
+	}
+	public AnimationFrameItem get(int index) {
+		if ((index >= 0) && (index < _items.size())) {
+			return _items.get(index);
+		} else {
+			return null;
+		}
+	}
+	
+	
+}
