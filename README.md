@@ -22,7 +22,7 @@ Chaque mode propose 4 niveaux de difficultés, possédant une chanson et un nomb
 A chaque fin de partie, l’utilisateur est envoyé sur une scène lui affichant son score et lui demandant son nom.
 L’utilisateur à la possibilité d’envoyer son score sur le serveur du jeu en appuyant sur le bouton « Sauver ». 
 
-Le classement mondial est consultable à cette adresse : [VODOJI](vodoji.roddev.info).
+Le classement mondial est consultable à cette adresse : [VODOJI](http://vodoji.roddev.info).
 
 #Equipe
 
